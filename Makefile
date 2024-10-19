@@ -26,3 +26,13 @@ generate-nutrition-api:
 		--go-grpc_out ./gen/go/ --go-grpc_opt paths=source_relative \
 		--plugin=protoc-gen-go-grpc=bin/protoc-gen-go-grpc \
 		proto/nutrition/nutrition.proto
+
+
+generate-sso-api:
+	protoc \
+		-I proto \
+		--go_out ./gen/go/ --go_opt paths=source_relative \
+		--plugin=protoc-gen-go=bin/protoc-gen-go \
+		--go-grpc_out ./gen/go/ --go-grpc_opt paths=source_relative \
+		--plugin=protoc-gen-go-grpc=bin/protoc-gen-go-grpc \
+		proto/sso/sso.proto
