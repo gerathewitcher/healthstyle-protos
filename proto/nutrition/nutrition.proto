@@ -67,11 +67,12 @@ message GetNutritionPlanResponse{
 
 
 message CreateFoodRequest{
-    string name = 1;
-    google.protobuf.UInt32Value calorie = 2;
-    google.protobuf.UInt32Value proteins = 3;
-    google.protobuf.UInt32Value fats = 4;
-    google.protobuf.UInt32Value carbs = 5;
+    string author_id = 1;
+    string name = 2;
+    google.protobuf.UInt32Value calorie = 3;
+    google.protobuf.UInt32Value proteins = 4;
+    google.protobuf.UInt32Value fats = 5;
+    google.protobuf.UInt32Value carbs = 6;
 }
 message UpdateFoodRequest{
     string id = 1;
@@ -101,8 +102,9 @@ message CreateMealFoodResponse{
 
 
 message CreateNutritionPlanRequest{
-    string name = 1;
-    google.protobuf.Timestamp day  = 2;
+    string author_id = 1;
+    string name = 2;
+    google.protobuf.Timestamp day  = 3;
 }
 
 
