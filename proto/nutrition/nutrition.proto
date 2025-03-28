@@ -1,17 +1,12 @@
 syntax = "proto3";
 
-
-
 package nutrition_v1;
-
 
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/empty.proto";
 import "google/protobuf/wrappers.proto";
 
-
 option go_package = "healthstyle.nutrition.v1;nutrition_v1";
-
 
 
 service NutritionV1 {
@@ -65,9 +60,7 @@ message GetNutritionPlanResponse{
 }
 
 
-
 message CreateFoodRequest{
-    string author_id = 1;
     string name = 2;
     google.protobuf.UInt32Value calorie = 3;
     google.protobuf.UInt32Value proteins = 4;
@@ -92,7 +85,7 @@ message CreateMealFoodRequest{
     string meal_id = 1;
     string food_id = 2;
     google.protobuf.UInt32Value food_weight = 3;
-    
+
 }
 
 message CreateMealFoodResponse{
@@ -102,14 +95,13 @@ message CreateMealFoodResponse{
 
 
 message CreateNutritionPlanRequest{
-    string author_id = 1;
     string name = 2;
     google.protobuf.Timestamp day  = 3;
 }
 
 
 message CreateNutritionPlanResponse {
-    string id = 1; 
+    string id = 1;
 }
 
 
@@ -121,7 +113,7 @@ message CreateMealRequest {
 }
 
 message CreateMealResponse {
-    string id = 1; 
+    string id = 1;
 }
 
 message NutritionPlan{
@@ -172,5 +164,3 @@ message MealFood {
     google.protobuf.Timestamp created_at = 5;
     google.protobuf.Timestamp updated_at = 6;
 }
-
-
