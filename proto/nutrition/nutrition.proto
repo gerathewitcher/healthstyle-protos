@@ -31,22 +31,22 @@ message GetFoodResponse {
 }
 
 message GetFoodsRequest{
-    uint64 offset = 1;
+    string cursor = 1;
     uint64 limit = 2;
 }
 
 message GetFoodsResponse{
-    uint64 total = 1;
+    string next_cursor = 1;
     repeated Food foods = 2;
 }
 
 message GetNutritionPlansRequest{
-    uint64 offset = 1;
+    string cursor = 1;
     uint64 limit = 2;
 }
 
 message GetNutritionPlansResponse{
-    uint64 total = 1;
+    string next_cursor = 1;
     repeated NutritionPlanShort plans = 2;
 
 }
