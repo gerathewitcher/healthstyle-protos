@@ -31,22 +31,22 @@ message GetFoodResponse {
 }
 
 message GetFoodsRequest{
-    string cursor = 1;
+    google.protobuf.StringValue cursor = 1;
     uint64 limit = 2;
 }
 
 message GetFoodsResponse{
-    string next_cursor = 1;
+    google.protobuf.StringValue next_cursor = 1;
     repeated Food foods = 2;
 }
 
 message GetNutritionPlansRequest{
-    string cursor = 1;
+    google.protobuf.StringValue cursor = 1;
     uint64 limit = 2;
 }
 
 message GetNutritionPlansResponse{
-    string next_cursor = 1;
+    google.protobuf.StringValue next_cursor = 1;
     repeated NutritionPlanShort plans = 2;
 
 }
